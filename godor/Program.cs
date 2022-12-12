@@ -28,7 +28,22 @@ namespace godor
         {
             Console.WriteLine("\n6. feladat");
             Console.WriteLine("a)");
-            Console.WriteLine("A gödör kezdete: ");
+            int kezdet = 0;
+            int veg = 0;
+            for (int i = 0; i < melysegek.Count; i++)
+            {
+                if (melysegek[i] != 0 && kezdet == 0)
+                {
+                    kezdet = i + 1;
+                }
+                if (kezdet != 0 && veg == 0 && melysegek[i + 1] == 0)
+                {
+                    veg = i + 1;
+                    break;
+                }
+            }
+
+            Console.WriteLine("A gödör kezdete: " + kezdet + " méter, a gödör vége: " + veg + " méter.");
         }
 
         private static void OtodikFeladat()

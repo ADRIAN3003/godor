@@ -39,7 +39,6 @@ namespace godor
                 if (kezdet != 0 && veg == 0 && melysegek[i + 1] == 0)
                 {
                     veg = i + 1;
-                    break;
                 }
             }
 
